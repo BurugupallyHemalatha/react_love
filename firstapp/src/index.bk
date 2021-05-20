@@ -1,0 +1,90 @@
+import React from 'react';
+const Header =()=>{
+    return(
+        <div>
+            
+            <center>
+                <h1>finally got it</h1>
+            </center>
+            <hr/>
+        </div>
+    )
+    
+}
+export default Header;
+
+
+*****Footer.jsx******
+import React from 'react';
+const Footer =()=>{
+    return(
+        <div>
+            <hr/>
+            <center>
+                <h1>finally got it</h1>
+            </center>
+        </div>
+    )
+    
+}
+export default Footer;
+
+
+
+$$$$$home.jsx$$$$$
+
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+const App = () => {
+    return ( 
+        <div >
+          <Header/>
+             <h1> chinny </h1>      
+             <h6> kutti </h6>      
+           <Footer />
+
+        </div>
+    )
+}
+export default App;
+
+
+&&&&index.jsx&&&&
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './component/home';
+ReactDOM.render(<App/>,document.getElementById('root'));
+
+
+
+&&& (JSON IN CONSOLE)&&&&&&
+import React,{Component} from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import JSON from './db.json';
+
+class Home extends Component {
+    constructor(){
+        super()
+
+        this.state={
+            news:JSON
+        }
+    }
+    render(){ 
+        console.log(this.state.news) 
+        return(
+        <>
+        <Header hema={'hema love'}/>
+           <h1> chinny </h1>      
+           <h6> kutti </h6>
+           <img src ="C:\Users\hemar\Desktop\html\images.html\books.jpg"/>
+           <a href="" ></a>  
+           <Footer year={2021}/>
+         </>
+  
+        )
+    }
+}
+export default Home;
